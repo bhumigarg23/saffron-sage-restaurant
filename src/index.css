@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-obsidian text-ivory font-sans;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: #C9A84C33;
+    color: #C9A84C;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C9A84C55;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C9A84C;
+  }
+}
+
+@layer components {
+  .gold-divider {
+    @apply w-16 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-6;
+  }
+
+  .section-label {
+    @apply text-gold tracking-[0.3em] uppercase text-xs font-sans font-medium;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-light text-ivory leading-tight;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-gold text-obsidian text-sm font-semibold tracking-widest uppercase transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(201,168,76,0.4)] active:scale-95;
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border border-gold text-gold text-sm font-semibold tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-obsidian hover:shadow-[0_0_30px_rgba(201,168,76,0.3)] active:scale-95;
+  }
+
+  .nav-link {
+    @apply text-ivory/70 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-gold after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .glass-card {
+    @apply bg-white/[0.03] border border-white/[0.07] backdrop-blur-sm;
+  }
+
+  .gold-text {
+    @apply text-gold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
